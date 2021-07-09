@@ -2,6 +2,11 @@
 
 Simple dashboard template with plotly and dash deployed on heroku
 
-### What is in this repository
+## Setup
 
-## .flake8
+- make setup
+- work in notebook
+- deploy app, runtime, procfile, requirements.txt
+-
+
+### What is in this repository
