@@ -1,0 +1,5 @@
+jupyterlab==3.0.14
+matplotlib==3.4.1
+seaborn==0.11.1
+dash==1.20.0
+gunicorn==20.1.0
