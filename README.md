@@ -46,7 +46,7 @@ You should work with python 3.8.11, this is the version that Heroku is currently
 
 #### Prior to deployment on Heroku
 - Make sure you clean up, process and strip down the data as much as you can first.
-- You can only use 500MB total memory on Heroku including data and the app, so don't waste space.
+- You can only use about 500MB of memory on Heroku, so don't waste space.
 - Test your app locally thoroughly first. Use an environment that uses the "requirements.txt" for this so you are using the same packages as will be used on Heroku.
 
 You should test everything locally with 
