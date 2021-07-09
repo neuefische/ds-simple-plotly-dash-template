@@ -1,12 +1,20 @@
 # ds-simple-plotly-dash-template
-
-Simple dashboard template with plotly and dash deployed on heroku
+With this template you can create a simple repo to create a plotly-dash that can be deployed on heroku.
 
 ## Aim
-The aim of this template is to give students a starting point to setup an easy plotly dash and to employit first locally and then via heroku.
+The aim of this template is to give students a starting point to set-up an easy plotly dash and to employ it locally and to the internet.
+
+### What is in this repository
+01_notebook_plotly_dash.ipny -> Notbook for a first glance at the dash syntax
+app.py -> Py-File wich contains the dash for deployment
+Procfile -> required for deployment
+Runtime -> required for deployment
 
 ## Getting started
-Don't clone this repository. its a template; Create your own repository by using "use template"
+Don't clone this repository. It's a template: create your own repository by using "use this template".
+Set up the environment with make setup
+
+## The next steps
 
 ### Setup
 - make setup
@@ -19,19 +27,7 @@ Keep in mind, there are two requirement files in this template:
 
 You should work with python 3.8.11, this is the version that Heroku is currently using.
 
-
-### Deployment to Heroku
-First you need to create an Account
-Apps-> New -> New Apps
-select europe
-Pick you name
-Use the github connection (allow and set this up if required)
-pick your repository
-Select the branch (you should have a specific repository for the visualisation, at least a specific branch that only has the necessary data without overhead in it)
-wait
-Hit deploy
-hit view
-
+## General Tips for deployment of dash to Heroku
 ### Prior to deployment on Heroku
 Make sure you clean up, process and strip down the data as much as you can first.
 You can only use 500MB total memory on Heroku, so don't waste space.
@@ -46,5 +42,19 @@ Make sure you have these three files:
 1. Runtime.txt
 2. requirements.txt
 3. Procfile
+
+
+### Deployment to Heroku
+First you need to create an Account
+New -> New Apps
+Pick an uniqe name
+Select europe
+Use the github connection (allow and set this up if required)
+pick your repository
+Select the branch (you should have a specific repository for the visualisation, at least a specific branch that only has the necessary data without overhead in it)
+wait
+Hit deploy
+hit view
+
 
 ### What is in this repository
