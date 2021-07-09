@@ -2,40 +2,59 @@
 With this template you can create a simple repo to create a plotly-dash that can be deployed on heroku.
 
 ## Aim
-The aim of this template is to give students a starting point to set-up an easy plotly dash and to employ it locally and to the internet.
+The aim of this template is to give a starting point to set-up an easy plotly dash and to employ it locally and to the internet. 
+Also included are links to additional ressources.
 
-### What is in this repository
-01_notebook_plotly_dash.ipny -> Notbook for a first glance at the dash syntax
-app.py -> Py-File wich contains the dash for deployment
-Procfile -> required for deployment
-Runtime -> required for deployment
 
 ## Getting started
 Don't clone this repository. It's a template: create your own repository by using "use this template".
-Set up the environment with make setup
+
+#### What is in this repository
+
+| File |   |
+|-----|---|
+| 01_notebook_plotly_dash.ipny    | First glance at the dash syntax   |
+| app.py    | Py-File wich contains the dash for deployment  |
+| Procfile | Procfile |
+| Runtime |  Required for deployment |
+
 
 ## The next steps
+1. Set up the environment 
+2. Work in notebook to get aquainted with dash
+3. Work in app.py-File to create a dash
+5. Check if Dashboard is working locally with
+ - ``` $ python app.py```
+ - ``` $ gunicorn app:server```
+6. Deploy to Heroku
+7. Enjoy the result
 
-### Setup
-- make setup
-- work in notebook
-- deploy app, runtime, procfile, requirements.txt
+### Setup information
+Setup environment with
+```console
+$ make setup
+``` 
 
-Keep in mind, there are two requirement files in this template:
-1. requirements.txt This is the requirements that Heroku uses, it should not contain the development environment and as few libraries as possible. Because Memory is very limited
-2. requirements_dev.txt This is the requirements you can youse locally to set everything up and develop the dashboard. You can add as much here as you want to.
+There are two requirement files in this template:
+2. **requirements_dev.txt** This is the requirements file you can use locally to set everything up and develop the dashboard. You can add as much here as you want to.
+3. **requirements.txt** This is the requirements that Heroku uses. Because Memory for the App is very limited it should not contain the development environment (e.g. jupyter) and as few libraries as possible. 
 
 You should work with python 3.8.11, this is the version that Heroku is currently using.
 
 ## General Tips for deployment of dash to Heroku
+
+- deploy app, runtime, procfile, requirements.txt
+
 ### Prior to deployment on Heroku
-Make sure you clean up, process and strip down the data as much as you can first.
-You can only use 500MB total memory on Heroku, so don't waste space.
+- Make sure you clean up, process and strip down the data as much as you can first.
 
-Test your app locally thoroughly first. Use an environment that uses the "requirements.txt" for this, don't use the development environment.
+- You can only use 500MB total memory on Heroku including data and the app, so don't waste space.
 
-You should test everything locally with '''python app.py'''
-and with '''gunicorn app:server'''
+- Test your app locally thoroughly first. Use an environment that uses the "requirements.txt" for this so you are using the same packages as will be used on Heroku
+
+You should test everything locally with 
+```console $ python app.py```
+and with ```console $ gunicorn app:server```
 Make sure you restart your server (locally) after each change you made.
 
 Make sure you have these three files:
@@ -45,7 +64,9 @@ Make sure you have these three files:
 
 
 ### Deployment to Heroku
-First you need to create an Account
+The General steps are:
+
+First you need to login or create an Account on [Heroku](https://Heroku.com)
 New -> New Apps
 Pick an uniqe name
 Select europe
