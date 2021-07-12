@@ -8,12 +8,18 @@ from dash.dependencies import Input, Output, State
 external_stylesheets = ["https://codepen.io/chriddyp/pen/bWLwgP.css"]
 
 
+################################################################################
+# APP INITIALIZATION
+################################################################################
 app = dash.Dash(__name__, external_stylesheets=external_stylesheets)
 
 # this is needed by gunicorn command in procfile
 server = app.server
 
 
+################################################################################
+# PLOTS
+################################################################################
 LEGEND = ["clicks", "go fish!"]
 SCORES = [0.1, 0.1]
 
@@ -27,7 +33,9 @@ def get_figure(legend, scores):
 
 fig = get_figure(LEGEND, SCORES)
 
-
+################################################################################
+# LAYOUT
+################################################################################
 app.layout = html.Div(
     [
         html.H2(
@@ -50,6 +58,9 @@ app.layout = html.Div(
     ]
 )
 
+################################################################################
+# INTERACTION CALLBACKS
+################################################################################
 # https://dash.plotly.com/basic-callbacks
 @app.callback(
     [
