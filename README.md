@@ -84,9 +84,47 @@ The General steps are:
 2. click on New -> New Apps (on the right side)
 3. Pick an unique name, this is gonna be reflected in your apps URL
 4. Select europe
+
+
+You can use either use the Heroku CLI or the github connection to deploy your app (as of now the github connection is not working, due to a security breach):
+
+Heroku CLI:
+
+5. Install the Heroku CLI via npm:
+    ```console 
+    npm install -g heroku
+    ```
+6. Log in with the Heroku CLI:
+    ```console
+    heroku login
+    ```
+7. Create a git repository if you are not working with a github repository:
+    ```console
+    cd my-project/
+    git init
+    heroku git:remote -a <app-name>
+    ```
+    if you are working with github repository you can simply run:
+    ```console
+    heroku git:remote -a <app-name>
+    ```
+8. Push your code to Heroku:
+    ```console
+    git add .
+    git commit -m "my-commit-message"
+    git push heroku main
+    ```
+9. Wait until your app is deployed on Heroku.
+10. Hit view on Heroku and
+11. _Enjoy your dashboard!_
+
+Github connection:
+
 5. Use the github connection (allow and set this up if required)
 6. Pick your repository
 7. Select the branch (you should have a specific repository for the visualization or, at least, a specific branch)
 8. Hit deploy and wait for the build
 9. Hit view and
 10. _Enjoy!_
+
+
